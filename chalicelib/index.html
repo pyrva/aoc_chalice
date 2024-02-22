@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- indent body a bit -->
+    <div class="p-4">
+
+    <!-- make a nice header christmas themed header with gradiant-->
+    <div class="bg-gradient-to-r from-red-600 to-green-500 text-white p-4 rounded-lg">
+        <h1 class="text-3xl font-bold underline">
+            The Code of Christmas Past
+        </h1>
+    </div>
+
+    <!-- make a p with large font -->
+    <p class="text-2xl font-bold p-4">
+        Use the code below to solve Advent of Code day 1 part 1 for each year: 2015-2022. Use the code words you receive to solve for 2023.</p>
+    </p>
+
+
+
+<hr/>
+
+<!-- code block with tailwind -->
+<div class="bg-gray-100 text-xl border border-gray-300 rounded-lg p-4">
+    <pre>
+import urllib
+import urllib.request
+
+url = 'https://pyrva.adamemery.dev/2015' # Set destination URL here
+
+def get_request(url):
+    return urllib.request.urlopen(url).read().decode()
+
+def post_request(url, anwser):
+    data = str.encode(str(anwser))
+    req = urllib.request.Request(url, data)
+    req.add_header('Content-Type', 'text/plain')
+    return urllib.request.urlopen(req).read().decode()
+
+print(get_request(url))
+anwser = 42
+print(post_request(url, anwser))
+        
+        </pre>
+</div>
+</div>
+
+
+</body>
+</html>
+

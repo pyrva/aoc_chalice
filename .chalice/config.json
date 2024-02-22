@@ -1,0 +1,17 @@
+{
+  "version": "2.0",
+  "app_name": "aoc",
+  "stages": {
+    "dev": {
+      "api_gateway_stage": "api",
+      "api_gateway_custom_domain": {
+        "domain_name": "pyrva.adamemery.dev",
+        "security_policy": "TLS 1.2",
+        "certificate_arn": "arn:aws:acm:us-east-1:656704255939:certificate/5c12cb24-feea-4247-ae25-2a136eec258e",
+        "hosted_zone_id": "Z0094722JCQ21JBMCJZL",
+        "hosted_zone_name": "adamemery.dev",
+        "create_route53_record": true
+      }
+    }
+  }
+}
